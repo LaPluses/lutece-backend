@@ -10,7 +10,7 @@ import { getGraphQLUri } from '@/utils';
 
 const httpLink = createHttpLink({
 	// You should use an absolute URL here
-	uri: getGraphQLUri(),
+	uri: getGraphQLUri().toString(),
 	credentials: 'same-origin',
 	fetch,
 });

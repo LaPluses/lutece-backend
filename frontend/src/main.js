@@ -88,7 +88,7 @@ Vue.use(Vuetify, {
 	},
 });
 
-Vue.filter('nl2br', (text : String) => text.replace(/(?:\r\n|\r|\n)/g, '<br>'));
+Vue.filter('nl2br', (text) => text.replace(/(?:\r\n|\r|\n)/g, '<br>'));
 
 /* eslint-disable no-new */
 new Vue({

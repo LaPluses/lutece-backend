@@ -58,7 +58,8 @@ INSTALLED_APPS = [
 ]
 
 GRAPHENE = {
-    'SCHEMA': 'lutece.schema.schema'
+    'SCHEMA': 'lutece.schema.schema',
+    'SCHEMA_OUTPUT': 'frontend/schema.json',
 }
 
 MIDDLEWARE = [
