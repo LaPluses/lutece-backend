@@ -3,7 +3,7 @@ from django.http import Http404
 from django.http import HttpResponse
 from .models import Problem, Sample
 from django.conf import settings
-import Lutece.config as config
+import lutece.config as config
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.decorators import permission_required
 from .validator import check_title, check_timelimit, check_memorylimit

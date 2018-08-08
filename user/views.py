@@ -8,10 +8,10 @@ from annoying.functions import get_object_or_None
 from django.contrib.auth.decorators import login_required
 from .util import get_recently, get_user_report
 from submission import judge_result
-from Lutece.config import RECENT_NUMBER
+from lutece.config import RECENT_NUMBER
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from utils.paginator_menu import get_range as page_range
-import Lutece.config as config
+import lutece.config as config
 from django.urls import reverse
 
 

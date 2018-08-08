@@ -1,5 +1,5 @@
 from django import forms
-from Lutece.config import MAX_SOURCECORE_LENGTH
+from lutece.config import MAX_SOURCECORE_LENGTH
 from problem.models import Problem
 from utils.language import Language
 from annoying.functions import get_object_or_None

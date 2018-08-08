@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import permission_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Contest
-from Lutece import config
+from lutece import config
 from utils.paginator_menu import get_range as page_range
 from .contest_type import get_contest_type_list, get_contest_type
 from django.http import HttpResponse, Http404

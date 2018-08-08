@@ -82,7 +82,7 @@ class Query(object):
 
     def resolve_problemList(self, info, page, **kwargs):
         from django.core.paginator import Paginator
-        from Lutece.config import PER_PAGE_COUNT
+        from lutece.config import PER_PAGE_COUNT
         filter = kwargs.get('filter')
         problem_list = Problem.objects.all()
         if not info.context.user.has_perm('problem.view_all'):

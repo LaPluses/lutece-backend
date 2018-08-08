@@ -5,7 +5,7 @@ from user.models import User
 from user.decorators import login_required_ajax
 from json import dumps
 from django.conf import settings
-import Lutece.config as config
+import lutece.config as config
 from .models import Submission, Judgeinfo
 from problem.models import Problem
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger

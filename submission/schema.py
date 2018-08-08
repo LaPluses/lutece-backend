@@ -64,7 +64,7 @@ class SubmitSolution(graphene.Mutation):
         from data_server.util import get_case_number
         from submission.judge_result import Judge_result
         from problem.util import InsSubmittimes
-        from Lutece.settings import TASK_QUEUE
+        from lutece.settings import TASK_QUEUE
         SolutionForm = SubmitSolutionForm(kwargs)
         if SolutionForm.is_valid():
             values = SolutionForm.cleaned_data
@@ -95,7 +95,7 @@ class Query(object):
 
     def resolve_submissionList(self, info, page, date, **kwargs):
         from django.core.paginator import Paginator
-        from Lutece.config import PER_PAGE_COUNT
+        from lutece.config import PER_PAGE_COUNT
         pk = kwargs.get('pk')
         user = kwargs.get('user')
         problem = kwargs.get('problem')

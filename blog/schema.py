@@ -69,7 +69,7 @@ class Query(object):
 
     def resolve_blogList( self , info , page ):
         from django.core.paginator import Paginator
-        from Lutece.config import PER_PAGE_COUNT
+        from lutece.config import PER_PAGE_COUNT
         blog_list = Blog.objects.all()
         if not info.context.user.has_perm('blog.view_all'):
             blog_list = blog_list.filter( disable = False )

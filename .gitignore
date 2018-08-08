@@ -105,7 +105,7 @@ ENV/
 .vs/
 
 # setting.py
-Lutece/xiper_local.py
+lutece/xiper_local.py
 
 # runserver_xiper
 runserver_xiper.sh
@@ -114,15 +114,15 @@ genroot_xiper.sh
 test.sh
 
 # SQLite3 Default DB
-Lutece.db
+lutece.db
 db.sqlite3
-Lutece/local_hezhu.py
+lutece/local_hezhu.py
 
 # migrations
 */migrations/
 
-# Lutece_Data
-*/Lutece_Data/
+# lutece_data
+*/lutece_data/
 
 # production.py
 production.py
