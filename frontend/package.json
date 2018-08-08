@@ -6,7 +6,8 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "apollo-codegen": "apollo-codegen"
   },
   "dependencies": {
     "@neilsustc/markdown-it-katex": "^0.1.0",
@@ -25,20 +26,25 @@
     "lodash.debounce": "^4.0.8",
     "markdown-it": "^8.4.2",
     "moment": "^2.22.2",
+    "register-service-worker": "^1.4.1",
     "unfetch": "^3.1.0",
     "vue": "^2.5.2",
     "vue-apollo": "^3.0.0-beta.19",
     "vue-calendar-heatmap": "^0.8.3",
+    "vue-class-component": "^6.2.0",
     "vue-codemirror": "^4.0.5",
     "vue-line-clamp": "^1.2.3",
     "vue-meta": "^1.5.2",
     "vue-moment": "^4.0.0",
+    "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
     "vuetify": "^1.1.8",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@mdi/font": "^2.5.94",
+    "@types/node": "^10.5.7",
+    "apollo-codegen": "^0.20.2",
     "autoprefixer": "^9.0.1",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
@@ -85,6 +91,7 @@
     "shelljs": "^0.8.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "typescript": "^3.0.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.2.6",
@@ -95,16 +102,5 @@
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
     "webpack-merge": "^4.1.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
-  "description": "Lutece frontend project",
-  "author": "",
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
   }
 }

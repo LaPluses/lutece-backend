@@ -34,16 +34,17 @@ import colors from 'vuetify/es5/util/colors';
 import Meta from 'vue-meta';
 import lineClamp from 'vue-line-clamp';
 import router from './router';
-import Base from './base';
-import apolloProvider from './apollo';
-import store from './store';
+import Base from './base.vue';
+import apolloProvider from '@/apollo';
+import store from '@/store';
 import mixrend from '@/plugins/markdown-it-katex';
+import vueMoment from 'vue-moment'
 
 import '@mdi/font/css/materialdesignicons.css';
 import 'katex/dist/katex.css';
 import './stylus/main.styl';
 
-Vue.use(require('vue-moment'));
+Vue.use(vueMoment);
 
 Vue.config.productionTip = false;
 Vue.use(Meta);
@@ -87,7 +88,7 @@ Vue.use(Vuetify, {
 	},
 });
 
-Vue.filter('nl2br', text => text.replace(/(?:\r\n|\r|\n)/g, '<br>'));
+Vue.filter('nl2br', (text : String) => text.replace(/(?:\r\n|\r|\n)/g, '<br>'));
 
 /* eslint-disable no-new */
 new Vue({

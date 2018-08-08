@@ -1,31 +1,31 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import Router, {NavigationGuard} from 'vue-router';
 import store from '../store';
-import Home from '@/components/home/home';
-import About from '@/components/about/about';
-import StatusList from '@/components/status/list/app';
-import StatusDetail from '@/components/status/detail/app';
-import Contest from '@/components/contest/contest';
-import BlogList from '@/components/blog/list/app';
-import BlogDetail from '@/components/blog/detail/app';
-import BlogEditor from '@/components/blog/basic/app';
-import UserList from '@/components/user/list/app';
-import UserDetail from '@/components/user/detail/app';
-import UserSettings from '@/components/user/settings/app';
-import Login from '@/components/signin/login';
-import Signup from '@/components/signin/signup';
-import Signout from '@/components/signin/signout';
-import NotFound from '@/components/global/404';
-import ProblemList from '@/components/problem/list/app';
-import ProblemDetail from '@/components/problem/detail/app';
-import ProblemDescription from '@/components/problem/detail/description';
-import ProblemEditor from '@/components/problem/detail/editor';
-import ProblemDiscussion from '@/components/problem/detail/discussion';
-import ProblemEdit from '@/components/problem/detail/edit';
+import Home from '@/views/Home.vue';
+import About from '@/views/About.vue';
+import StatusList from '@/views/StatusList.vue';
+import StatusDetail from '@/views/StatusDetail.vue'
+import Contest from '@/views/Contest.vue'
+import BlogList from '@/views/BlogList.vue'
+import BlogDetail from '@/views/BlogDetail.vue'
+import BlogEditor from '@/views/BlogEditor.vue'
+import UserList from '@/views/UserList.vue'
+import UserDetail from '@/views/UserDetail.vue'
+import UserSettings from '@/views/UserSettings.vue'
+import Login from '@/views/Login.vue'
+import Signup from '@/views/Signup.vue'
+import Signout from '@/views/Signout.vue'
+import NotFound from '@/views/NotFound.vue'
+import ProblemList from '@/views/ProblemList.vue'
+import ProblemDetail from '@/views/ProblemDetail.vue'
+import ProblemDescription from '@/views/ProblemDescription.vue'
+import ProblemEditor from '@/views/ProblemEditor.vue'
+import ProblemDiscussion from '@/views/ProblemDiscussion.vue'
+import ProblemEdit from '@/views/ProblemEdit.vue'
 
 Vue.use(Router);
 
-const ifNotAuthenticated = (to, from, next) => {
+const ifNotAuthenticated : NavigationGuard = (to, from, next) => {
 	if (!store.getters['user/isAuthenticated']) {
 		next();
 		return;
@@ -33,7 +33,7 @@ const ifNotAuthenticated = (to, from, next) => {
 	next('/');
 };
 
-const ifAuthenticated = (to, from, next) => {
+const ifAuthenticated : NavigationGuard = (to, from, next) => {
 	if (store.getters['user/isAuthenticated']) {
 		next();
 		return;
@@ -47,12 +47,12 @@ export default new Router({
 		{
 			path: '',
 			redirect: {
-				name: 'Home',
+				name: 'home',
 			},
 		},
 		{
 			path: '/home',
-			name: 'Home',
+			name: 'home',
 			component: Home,
 		},
 		{
